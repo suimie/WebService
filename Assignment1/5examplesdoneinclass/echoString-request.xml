@@ -1,0 +1,9 @@
+<methodCall><methodName>jac.echoString</methodName>
+	<params>
+		<param>
+			<value>
+				<string>Hello World!</string>
+			</value>
+		</param>
+	</params>
+</methodCall>

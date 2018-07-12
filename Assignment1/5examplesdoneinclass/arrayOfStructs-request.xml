@@ -1,0 +1,24 @@
+<methodCall><methodName>jac.arrayOfStructs</methodName>
+	<params>
+		<param>
+			<value>
+				<array>
+					<data>
+						<value>
+							<struct>
+								<member><name>moe</name><value><int>32</int></value></member>
+								<member><name>curly</name><value><int>12</int></value></member>
+							</struct>
+						</value>
+						<value>
+							<struct>
+								<member><name>larry</name><value><int>22</int></value></member>
+								<member><name>curly</name><value><int>11</int></value></member>
+							</struct>
+						</value>
+					</data>
+				</array>
+			</value>
+		</param>
+	</params>
+</methodCall>

@@ -1,0 +1,9 @@
+<methodResponse>
+	<params>
+		<param>
+			<value>
+				<string>Hello World!</string>
+			</value>
+		</param>
+	</params>
+</methodResponse>

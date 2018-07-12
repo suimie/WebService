@@ -1,0 +1,14 @@
+<methodCall><methodName>jac.addTwoDouble</methodName>
+<params>
+	<param>
+		<value>
+			<double>34.54</double>
+		</value>
+	</param>
+	<param>
+		<value>
+			<double>52.34</double>
+		</value>
+	</param>
+</params>
+</methodCall>

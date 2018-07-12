@@ -1,0 +1,9 @@
+<methodCall><methodName>jac.echoDouble</methodName>
+	<params>
+		<param>
+			<value>
+				<double>34.2</double>
+			</value>
+		</param>
+	</params>
+</methodCall>

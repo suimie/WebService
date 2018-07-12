@@ -1,0 +1,9 @@
+<methodResponse>
+	<params>
+		<param>
+			<value>
+				<int>23</int>
+			</value>
+		</param>
+	</params>
+</methodResponse>

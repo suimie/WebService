@@ -1,0 +1,9 @@
+<methodCall><methodName>jac.getStateName</methodName>
+	<params>
+		<param>
+			<value>
+				<int>1</int>
+			</value>
+		</param>
+	</params>
+</methodCall>

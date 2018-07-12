@@ -1,0 +1,13 @@
+<methodCall><methodName>jac.echoStruct</methodName>
+	<params>
+		<param>
+			<value>
+				<struct>
+					<member><name>givenName</name><value>Suim</value></member>
+					<member><name>familyName</name><value>Park</value></member>
+					<member><name>age</name><value><int>20</int></value></member>
+				</struct>
+			</value>
+		</param>
+	</params>
+</methodCall>

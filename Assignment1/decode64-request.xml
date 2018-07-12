@@ -1,0 +1,9 @@
+<methodCall><methodName>jac.decode64</methodName>
+	<params>
+		<param>
+			<value>
+				<base64>U3RlcGggTW9yZWF1</base64>
+			</value>
+		</param>
+	</params>
+</methodCall>
