@@ -27,7 +27,7 @@ if($_SERVER['REQUEST_METHOD'] == "GET"){
             $user_found = true;
             //$json_people = json_encode(array("people"=>$person, "Links"=>createLinks($id)));
             response(
-              array("People"=>$person, "Links"=>create_links($id))
+              array("People"=>$person, "Links"=>createLinks($id))
             );
           }
         }
@@ -39,7 +39,7 @@ if($_SERVER['REQUEST_METHOD'] == "GET"){
           );
           */
           response(
-            array("Error"=>"User was not found", "Links"=>create_links()),
+            array("Error"=>"User was not found", "Links"=>createLinks()),
             400
           );
         }
@@ -52,7 +52,7 @@ if($_SERVER['REQUEST_METHOD'] == "GET"){
         ));
         */
         response(
-          array("People"=>$people, "Links"=>create_links())
+          array("People"=>$people, "Links"=>createLinks())
         );
     }// endif get user id
 
