@@ -58,6 +58,6 @@ if($_SERVER['REQUEST_METHOD'] == "GET"){
 
 }else{
     // not GET, return error
-    echo "error";
+    response(array("Error"=>"Method not found", "Links"=>createLinks()), 405);
 }
 ?>
