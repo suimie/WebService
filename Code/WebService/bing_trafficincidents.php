@@ -54,16 +54,28 @@ $cp = getcp();
 
 print_r($cp);
 $api_key = "AjDvdPcUrSfJfrA73THbzgQimIgKmNp1u4Q1GAq1TQKcEEVsGU_zn0BaJllRMkhm";
+
+
 $longitud1 = floatval($cp[0]) -1;
 $longitud2 = floatval($cp[0]) +1;
 $latitude1 = floatval($cp[1]) +1;
 $latitude2 = floatval($cp[1]) -1;
 
 $mapArea = $longitud1 . "," .  $latitude1 . "," . $longitud2 . ",". $latitude2;//37,-105,45,-94";//"45.42449569,-73.97472251,45.40482142,73.91386055";
+
+//$mapArea = "45.400154,-73.821361,45.669501,-73.291957";
+//$mapArea = "44.39,-73.95,47,-122";
+/*
+$includeLocationCode = "1";
+$severity = "1,2,3,4";
+$type = "1,2,3,4,5,6,7,8,10,11";
+*/
 print_r($mapArea);
 
 $url = "http://dev.virtualearth.net/REST/V1/Traffic/Incidents/"
   . $mapArea . "/"
+//  . "?severity=" . $severity
+//  . "&type=" . $type
   . "true?" . "t=9,2&s=2,3&"
   . "key=" . $api_key;
 
@@ -76,17 +88,19 @@ $results = curl_exec($ch);
 curl_close($ch);
 
 $data = json_decode($results);
-$rs = $data->resourceSets[0]->resources;
-print_r($rs);
-foreach($rs as $item){
-  print_r($item->point->coordinates[0]);
-  echo ', ';
-  print_r($item->point->coordinates[1]);
-  echo ', ';
-  print_r($item->description);
-  echo ', ';
-  print_r($item->type);
-  echo '<br />';
+if ($data->resourceSets != null) {
+  $rs = $data->resourceSets[0]->resources;
+  print_r($rs);
+  foreach($rs as $item){
+    print_r($item->point->coordinates[0]);
+    echo ', ';
+    print_r($item->point->coordinates[1]);
+    echo ', ';
+    print_r($item->description);
+    echo ', ';
+    print_r($item->type);
+    echo '<br />';
+  }
 }
 ?>
 
