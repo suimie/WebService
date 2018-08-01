@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<soap:Envelope
+  xmlns:soap="http://www.w3.org/2003/05/soap-envelope"
+  soap:encodingStyle="http://w3.org/2003/05/soap-encoding">
+  <!-- omitted header -->
+  <soap:Body xmlns:steph="http://stephmoreau.ca/JAC/soap">
+    <!-- sample request 1 -->
+    <steph:getStockPrice>
+      <setph:stockName>APPLE</steph:stockName>
+    </steph:getStockPrice>
+    <!-- sample request 2 -->
+    <steph:getStockPrice>
+      <setph:stockName>FBOOK</setph:stockName>
+    </steph:getStockPrice>
+    <!-- sample request 3 -->
+    <steph:callSomething>
+      <steph:function>getStockPrice</steph:function>
+      <steph:parameter>YAHOO</steph:parameter>
+    </steph:callSomething>
+
+    <!-- SEPERATE FILE FOR RESPONSE -->
+    <!-- sample response 1 -->
+    <steph:putStockPrice>
+      <steph:price>123.32</steph:price>
+    </steph:putStockPrice>
+    <!-- sample response 2 -->
+    <steph:putStockPrice>
+      <steph:price>159.25</steph:price>
+    </steph:putStockPrice>
+
+    <soap:Fault>
+    </soap:Fault>
+  </soap:Body>
+</soap:Envelope>

@@ -5,7 +5,6 @@ require("functions.php");
 // check for GET method
 if ($_SERVER['REQUEST_METHOD']=="GET"){
 
-  //$people = ["John","Peter","Simon","Joe"];
   $people = array(
       array("id"=>2, "name"=>"John", "city"=>"Montreal"),
       array("id"=>3, "name"=>"Peter", "city"=>"Ottawa"),
@@ -35,20 +34,17 @@ if ($_SERVER['REQUEST_METHOD']=="GET"){
     }
   }else{
     //return list of all users
-    //$links = array("rel"=>"self", "href"=>"http://localhost:8080/api/web.php");
-
     response(
       array("People"=>$people, "Links"=>create_links())
     );
   }//endif get user id
 
-  //change header content type to respond as JSON
-//  header("Content-Type:application/json");
-//  echo $json_people;
-
 }else{
   //not GET, return error
-  echo "error";
+    response(
+        array("Error"=>"Method not found", "links"=>create_links()),
+        405
+      );
 }
 
 ?>
