@@ -1,0 +1,2 @@
+SOAP fault code
+Root element of SOAP and WSDL
