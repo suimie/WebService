@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <convertFahrenheitToCelsius soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <fahrenheit xsi:type="xsd:decimal">0</fahrenheit>
+      </convertFahrenheitToCelsius>
+   </soapenv:Body>
+</soapenv:Envelope>

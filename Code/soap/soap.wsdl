@@ -1,0 +1,46 @@
+<definitions 
+	xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" 
+	xmlns:tns="http://localhost/soap/server" 
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+	xmlns="http://schemas.xmlsoap.org/wsdl/" 
+	targetNamespace="http://localhost/soap/server">
+	<types>
+		<xsd:schema targetNamespace="http://localhost/soap/server">
+			<xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+			<xsd:import namespace="http://schemas.xmlsoap.org/wsdl/"/>
+		</xsd:schema>
+	</types>
+	<message name="stockPriceRequest">
+		<part name="stock_name" type="xsd:string"/>
+	</message>
+	<message name="stockPriceResponse">
+		<part name="price" type="xsd:decimal"/>
+	</message>
+	<portType name="serverPortType">
+		<operation name="stockPrice">
+			<input message="tns:stockPriceRequest"/>
+			<output message="tns:stockPriceResponse"/>
+		</operation>
+	</portType>
+	<binding name="serverBinding" type="tns:serverPortType">
+		<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="stockPrice">
+			<soap:operation soapAction="http://localhost/webservice/soap/soap.php/stockPrice" style="rpc"/>
+			<input>
+				<soap:body use="encoded" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+			</input>
+			<output>
+				<soap:body use="encoded" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="server">
+		<port name="serverPort" binding="tns:serverBinding">
+			<soap:address location="http://localhost:8080/webservice/soap/soap.php"/>
+		</port>
+	</service>
+</definitions>

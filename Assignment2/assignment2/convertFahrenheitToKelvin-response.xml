@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/">
+   <SOAP-ENV:Body>
+      <ns1:convertFahrenheitToKelvinResponse xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/">
+         <kelvin xsi:type="xsd:decimal">273.15</kelvin>
+      </ns1:convertFahrenheitToKelvinResponse>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

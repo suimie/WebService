@@ -1,0 +1,132 @@
+<definitions xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://localhost/soap/server" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://localhost/soap/server">
+  <types>
+    <xsd:schema targetNamespace="http://localhost/soap/server">
+    <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+    <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/"/>
+    </xsd:schema>
+  </types>
+  <message name="convertCelsiusToFahrenheitRequest">
+    <part name="celcius" type="xsd:decimal"/>
+  </message>
+  <message name="convertCelsiusToFahrenheitResponse">
+    <part name="fahrenheit" type="xsd:decimal"/>
+  </message>
+  <message name="convertCelsiusToKelvinRequest">
+    <part name="celcius" type="xsd:decimal"/>
+  </message>
+  <message name="convertCelsiusToKelvinResponse">
+    <part name="kelvin" type="xsd:decimal"/>
+  </message>
+  <message name="convertFahrenheitToCelsiusRequest">
+    <part name="fahrenheit" type="xsd:decimal"/>
+  </message>
+  <message name="convertFahrenheitToCelsiusResponse">
+    <part name="celcius" type="xsd:decimal"/>
+  </message>
+  <message name="convertFahrenheitToKelvinRequest">
+    <part name="fahrenheit" type="xsd:decimal"/>
+  </message>
+  <message name="convertFahrenheitToKelvinResponse">
+    <part name="kelvin" type="xsd:decimal"/>
+  </message>
+  <message name="convertKelvinToCelsiusRequest">
+    <part name="kelvin" type="xsd:decimal"/>
+  </message>
+  <message name="convertKelvinToCelsiusResponse">
+    <part name="celcius" type="xsd:decimal"/>
+  </message>
+  <message name="convertKelvinToFahrenheitRequest">
+    <part name="kelvin" type="xsd:decimal"/>
+  </message>
+  <message name="convertKelvinToFahrenheitResponse">
+    <part name="fahrenheit" type="xsd:decimal"/>
+  </message>
+  <portType name="serverPortType">
+    <operation name="convertCelsiusToFahrenheit">
+      <input message="tns:convertCelsiusToFahrenheitRequest"/>
+      <output message="tns:convertCelsiusToFahrenheitResponse"/>
+    </operation>
+    <operation name="convertCelsiusToKelvin">
+      <input message="tns:convertCelsiusToKelvinRequest"/>
+      <output message="tns:convertCelsiusToKelvinResponse"/>
+    </operation>
+    <operation name="convertFahrenheitToCelsius">
+      <input message="tns:convertFahrenheitToCelsiusRequest"/>
+      <output message="tns:convertFahrenheitToCelsiusResponse"/>
+    </operation>
+    <operation name="convertFahrenheitToKelvin">
+      <input message="tns:convertFahrenheitToKelvinRequest"/>
+      <output message="tns:convertFahrenheitToKelvinResponse"/>
+    </operation>
+    <operation name="convertKelvinToCelsius">
+      <input message="tns:convertKelvinToCelsiusRequest"/>
+      <output message="tns:convertKelvinToCelsiusResponse"/>
+    </operation>
+    <operation name="convertKelvinToFahrenheit">
+      <input message="tns:convertKelvinToFahrenheitRequest"/>
+      <output message="tns:convertKelvinToFahrenheitResponse"/>
+    </operation>
+  </portType>
+  <binding name="serverBinding" type="tns:serverPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="convertCelsiusToFahrenheit">
+      <soap:operation soapAction="http://localhost/webservice/soap/convertTemp.php/convertCelsiusToFahrenheit" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="convertCelsiusToKelvin">
+      <soap:operation soapAction="http://localhost/webservice/soap/convertTemp.php/convertCelsiusToKelvin" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+      <operation name="convertFahrenheitToCelsius">
+      <soap:operation soapAction="http://localhost/webservice/soap/convertTemp.php/convertFahrenheitToCelsius" style="rpc"/>
+      <input>
+      <soap:body use="encoded" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+      <soap:body use="encoded" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="convertFahrenheitToKelvin">
+      <soap:operation soapAction="http://localhost/webservice/soap/convertTemp.php/convertFahrenheitToKelvin" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="convertKelvinToCelsius">
+      <soap:operation soapAction="http://localhost/webservice/soap/convertTemp.php/convertKelvinToCelsius" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="convertKelvinToFahrenheit">
+      <soap:operation soapAction="http://localhost/webservice/soap/convertTemp.php/convertKelvinToFahrenheit" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="server">
+    <port name="serverPort" binding="tns:serverBinding">
+      <soap:address location="http://localhost:8080/webservice/soap/convertTemp.php"/>
+    </port>
+  </service>
+</definitions>

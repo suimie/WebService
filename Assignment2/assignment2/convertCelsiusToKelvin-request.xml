@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <convertCelsiusToKelvin soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <celcius xsi:type="xsd:decimal">0</celcius>
+      </convertCelsiusToKelvin>
+   </soapenv:Body>
+</soapenv:Envelope>
